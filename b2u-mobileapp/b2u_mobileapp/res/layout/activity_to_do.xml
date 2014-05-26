@@ -27,13 +27,16 @@
             android:layout_height="28dp" />
     </LinearLayout>
 
-    <ListView
+    <GridView
         android:id="@+id/listChallenge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:numColumns="2"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp"
         tools:listitem="@layout/row_list_to_do" 
         android:padding="6dip" >
 
-    </ListView>
+    </GridView>
 
 </LinearLayout>

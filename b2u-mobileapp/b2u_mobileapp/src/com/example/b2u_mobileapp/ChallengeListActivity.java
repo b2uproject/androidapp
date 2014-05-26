@@ -7,7 +7,7 @@ import java.util.List;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.widget.ListView;
+import android.widget.GridView;
 
 import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
 import com.microsoft.windowsazure.mobileservices.MobileServiceTable;
@@ -51,8 +51,8 @@ public class ChallengeListActivity extends Activity
 			
 			// Create an adapter to bind the items with the view
 			mAdapter = new ChallengeAdapter(this, R.layout.row_list_to_do);
-			ListView listViewToDo = (ListView) findViewById(R.id.listChallenge);
-			listViewToDo.setAdapter(mAdapter);
+			GridView gridViewToDo = (GridView) findViewById(R.id.listChallenge);
+			gridViewToDo.setAdapter(mAdapter);
 
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
