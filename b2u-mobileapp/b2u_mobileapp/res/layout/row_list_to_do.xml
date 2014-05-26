@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:orientation="vertical">
     
-    <CheckBox
-        android:id="@+id/checkToDoItem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/checkbox_text" />
-
     <ImageView
         android:id="@+id/circle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/circle" />
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+		android:adjustViewBounds="true"
+        android:contentDescription="@string/challenge_title"
+        android:src="@drawable/challenge_circle" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/challenge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/circle"
+        android:layout_centerHorizontal="true"
+        android:text="@string/challenge_title" />
+
+</RelativeLayout>
