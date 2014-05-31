@@ -39,7 +39,7 @@ public class ChallengeListActivity extends Activity
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_to_do);
+		setContentView(R.layout.challenge_list);
 		try {
 			mClient = new MobileServiceClient(
 					"https://b2u.azure-mobile.net/",
@@ -50,7 +50,7 @@ public class ChallengeListActivity extends Activity
 			mChallenge = mClient.getTable(Challenge.class);
 			
 			// Create an adapter to bind the items with the view
-			mAdapter = new ChallengeAdapter(this, R.layout.row_list_to_do);
+			mAdapter = new ChallengeAdapter(this, R.layout.challenge_circle);
 			GridView gridViewToDo = (GridView) findViewById(R.id.listChallenge);
 			gridViewToDo.setAdapter(mAdapter);
 
