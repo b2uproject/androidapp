@@ -9,5 +9,10 @@
     <string name="hamburger">hamburger icon</string>
     <string name="env">Environment Icon</string>
     <string name="status">Your status on the challenge</string>
+    <string name="details">Details</string>
+    <string name="challenge_description">Information about the Challenge</string>
+    <string name="challenge_time_label">Estimated Duration:</string>
+    <string name="challenge_time_length">Number</string>
+    <string name="challenge_time_unit">Unit</string>
     
 </resources>

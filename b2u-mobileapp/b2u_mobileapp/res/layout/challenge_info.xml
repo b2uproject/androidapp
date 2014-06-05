@@ -50,10 +50,11 @@
 		        android:id="@+id/category_icon"
 		        android:layout_width="wrap_content"
 		        android:layout_height="0dip"
-		        android:layout_weight="0.2"
 		        android:layout_gravity="center"
-		        android:src="@drawable/environment"
-		        android:contentDescription="@string/env" >
+		        android:layout_marginTop="20dp"
+		        android:layout_weight="0.1"
+		        android:contentDescription="@string/env"
+		        android:src="@drawable/environment" >
 		
 		    </ImageView>   
 		    
@@ -61,13 +62,67 @@
 		        android:id="@+id/progress"
 		        android:layout_width="wrap_content"
 		        android:layout_height="0dip"
-		        android:layout_weight="0.05"
 		        android:layout_gravity="center"
-		        android:src="@drawable/status_dots_nobg"
-		        android:contentDescription="@string/status" >
+		        android:layout_margin="5dp"
+		        android:layout_weight="0.03"
+		        android:contentDescription="@string/status"
+		        android:src="@drawable/status_dots_nobg" >
 		
 		    </ImageView> 
-	    
+
+	        <TextView
+	            android:id="@+id/challenge_description"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_horizontal"
+	            android:layout_margin="5dp"
+	            android:layout_weight="0.1"
+	            android:text="@string/challenge_description"
+	            android:textColor="@android:color/black" />
+		    
+	        <Button
+	            android:id="@+id/challenge_details"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="10dp"
+	            android:background="#FCB247"
+	            android:text="@string/details"
+          	    android:textColor="@android:color/white" />
+	        
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginBottom="5dp"
+	            android:layout_marginLeft="10dp"
+	            android:layout_marginRight="5dp"
+	            android:layout_marginTop="5dp"
+	            android:orientation="horizontal" >
+		    
+		        <TextView
+		            android:id="@+id/challenge_time_label"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/challenge_time_label"
+		            android:textColor="@android:color/black" />
+		        
+		        <TextView
+		            android:id="@+id/challenge_time_length"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="5dp"
+		            android:layout_marginRight="5dp"
+		            android:text="@string/challenge_time_length"
+		            android:textColor="@android:color/black" />
+	
+		        <TextView
+		            android:id="@+id/challenge_time_unit"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/challenge_time_unit"
+		            android:textColor="@android:color/black" />
+	        	        
+	        </LinearLayout>
+		    	    
 	    </LinearLayout>
       
     </ScrollView>
