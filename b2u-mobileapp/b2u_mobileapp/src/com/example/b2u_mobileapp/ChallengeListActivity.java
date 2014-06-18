@@ -7,7 +7,11 @@ import java.util.List;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
+import android.widget.Toast;
 
 import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
 import com.microsoft.windowsazure.mobileservices.MobileServiceTable;
@@ -53,12 +57,24 @@ public class ChallengeListActivity extends Activity
 			mAdapter = new ChallengeAdapter(this, R.layout.row_list_to_do);
 			GridView gridViewToDo = (GridView) findViewById(R.id.listChallenge);
 			gridViewToDo.setAdapter(mAdapter);
+			
+			listChallenges("Environmental");
+			
+			gridViewToDo.setOnItemClickListener(new OnItemClickListener() {
+
+				@Override
+				public void onItemClick(AdapterView<?> parent, View view,
+						int position, long id) {
+					// TODO Generate text based on click
+					Toast.makeText(getApplicationContext(),mAdapter.getItem(position).getmTitle(), Toast.LENGTH_SHORT).show();
+				}
+			});
 
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}
 		
-		listChallenges("Environmental");
+		
 	}
 	
 	/**

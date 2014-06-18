@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/challenge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/challenge_title" />
+
+    <TextView
+        android:id="@+id/challengeId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/challenge"
+        android:layout_below="@+id/challenge"
+        android:text="@string/challenge_id" />
+
+    <TextView
+        android:id="@+id/challengeCause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/challengeId"
+        android:layout_below="@+id/challengeId"
+        android:text="@string/challenge_cause" />
+    
+    <TextView
+        android:id="@+id/challengeCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/challengeCause"
+        android:layout_below="@+id/challengeCause"
+        android:text="@string/challenge_category" />
+
+    <TextView
+        android:id="@+id/challengeDifficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/challengeCategory"
+        android:layout_below="@+id/challengeCategory"
+        android:text="@string/challenge_difficulty" />
+    
+    <TextView
+        android:id="@+id/challengePoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/challengeDifficulty"
+        android:layout_below="@+id/challengeDifficulty"
+        android:text="@string/challenge_points" />
+        
+</RelativeLayout>

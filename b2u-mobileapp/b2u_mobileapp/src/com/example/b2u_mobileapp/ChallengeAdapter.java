@@ -34,6 +34,7 @@ public class ChallengeAdapter extends ArrayAdapter<Challenge> {
 		mLayoutResourceId = layoutResourceId;
 	}
 
+			
 	/**
 	 * Returns the view for a specific item on the list
 	 */
@@ -50,7 +51,16 @@ public class ChallengeAdapter extends ArrayAdapter<Challenge> {
 
 		row.setTag(currentItem);
 		final TextView title = (TextView) row.findViewById(R.id.challenge);
+		/*final TextView cause = (TextView) row.findViewById(R.id.challengeCause);
+		final TextView category = (TextView) row.findViewById(R.id.challengeCategory);
+		final TextView difficulty = (TextView) row.findViewById(R.id.challengeDifficulty);
+		final TextView points = (TextView) row.findViewById(R.id.challengePoints);*/
+		
 		title.setText(currentItem.getmTitle());
+		/*cause.setText(currentItem.getmCause());
+		category.setText(currentItem.getmCategory());
+		difficulty.setText(currentItem.getmDifficulty());
+		points.setText(currentItem.getmPoints());*/
 /*
 		checkBox.setOnClickListener(new View.OnClickListener() {
 
@@ -68,5 +78,8 @@ public class ChallengeAdapter extends ArrayAdapter<Challenge> {
 */
 		return row;
 	}
+	
+
+	
 	
 }
