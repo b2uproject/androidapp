@@ -1,9 +1,5 @@
 package com.example.b2u_mobileapp;
 
-import com.example.b2u_mobileapp.R;
-//import com.example.b2u.ChallengeListActivity;
-import com.example.b2u_mobileapp.Challenge;
-
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+//import com.example.b2u.ChallengeListActivity;
 
 /**
  * Adapter to bind a Challenge List to a view
@@ -57,6 +54,7 @@ public class ChallengeAdapter extends ArrayAdapter<Challenge> {
 		final TextView points = (TextView) row.findViewById(R.id.challengePoints);*/
 		
 		title.setText(currentItem.getmTitle());
+<<<<<<< HEAD
 		/*cause.setText(currentItem.getmCause());
 		category.setText(currentItem.getmCategory());
 		difficulty.setText(currentItem.getmDifficulty());
@@ -64,18 +62,20 @@ public class ChallengeAdapter extends ArrayAdapter<Challenge> {
 /*
 		checkBox.setOnClickListener(new View.OnClickListener() {
 
+=======
+		
+		//Listen to click events and open the clicked challenge's information
+		row.setOnClickListener(new View.OnClickListener() {
+>>>>>>> 88a6db285a49664be9919c7d54acfcb9e0c1ad69
 			@Override
 			public void onClick(View arg0) {
-				if (checkBox.isChecked()) {
-					checkBox.setEnabled(false);
-					if (mContext instanceof ToDoActivity) {
-						ToDoActivity activity = (ToDoActivity) mContext;
-						activity.checkItem(currentItem);
-					}
+				if (mContext instanceof ChallengeListActivity) {
+					ChallengeListActivity activity = (ChallengeListActivity) mContext;
+					activity.displayInfo(currentItem);
 				}
 			}
 		});
-*/
+		
 		return row;
 	}
 	

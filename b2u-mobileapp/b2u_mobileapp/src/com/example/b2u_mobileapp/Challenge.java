@@ -278,19 +278,6 @@ public class Challenge {
 	}
 
 	/**
-	 * Initializes a new ToDoItem
-	 * 
-	 * @param text
-	 *            The item text
-	 * @param id
-	 *            The item id
-	 */
-/*	public Challenge(String text, String id) {
-		this.setText(text);
-		this.setId(id);
-	}
-*/
-	/**
 	 * Returns the item id
 	 */
 	public String getId() {

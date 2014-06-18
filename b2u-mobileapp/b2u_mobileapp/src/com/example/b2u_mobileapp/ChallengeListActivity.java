@@ -43,7 +43,7 @@ public class ChallengeListActivity extends Activity
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_to_do);
+		setContentView(R.layout.challenge_list);
 		try {
 			mClient = new MobileServiceClient(
 					"https://b2u.azure-mobile.net/",
@@ -54,10 +54,11 @@ public class ChallengeListActivity extends Activity
 			mChallenge = mClient.getTable(Challenge.class);
 			
 			// Create an adapter to bind the items with the view
-			mAdapter = new ChallengeAdapter(this, R.layout.row_list_to_do);
+			mAdapter = new ChallengeAdapter(this, R.layout.challenge_circle);
 			GridView gridViewToDo = (GridView) findViewById(R.id.listChallenge);
 			gridViewToDo.setAdapter(mAdapter);
 			
+<<<<<<< HEAD
 			listChallenges("Environmental");
 			
 			gridViewToDo.setOnItemClickListener(new OnItemClickListener() {
@@ -70,10 +71,32 @@ public class ChallengeListActivity extends Activity
 				}
 			});
 
+=======
+			//Set clickListener here or in the adapter?
+			/*
+			gridViewToDo.setOnItemClickListener(new OnItemClickListener() {
+				@Override
+				public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+						long arg3) {
+					Intent challenge_info = new Intent("com.example.b2u_mobileapp.ChallengeInfoActivity");
+					Challenge challenge = (Challenge) arg0.getItemAtPosition(arg2);
+					challenge_info.putExtra("title", challenge.getmTitle());
+					challenge_info.putExtra("description", challenge.getmInstruction());
+					challenge_info.putExtra("challenge", challenge.getm);
+					startActivity(challenge_info);
+				}
+			});
+			*/
+>>>>>>> 88a6db285a49664be9919c7d54acfcb9e0c1ad69
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}
 		
+		
+	}
+	
+	public void displayInfo(Challenge challenge)
+	{
 		
 	}
 	

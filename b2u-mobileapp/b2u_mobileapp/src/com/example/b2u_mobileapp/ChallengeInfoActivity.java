@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package com.example.b2u_mobileapp;
 
 //import static com.microsoft.windowsazure.mobileservices.MobileServiceQueryOperations.val;
@@ -97,3 +98,34 @@ public class ChallengeInfoActivity extends Activity
 	}
 	
 }
+=======
+package com.example.b2u_mobileapp;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+public class ChallengeInfoActivity extends Activity {
+	
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.challenge_info);	
+	}
+	
+}
+
+/*
+
+Code to scroll down to the "Details" button:
+
+private final void focusOnView(){
+        new Handler().post(new Runnable() {
+            @Override
+            public void run() {
+                your_scrollview.scrollTo(0, your_EditBox.getTop());
+            }
+        });
+    }
+
+*/
+>>>>>>> 88a6db285a49664be9919c7d54acfcb9e0c1ad69
