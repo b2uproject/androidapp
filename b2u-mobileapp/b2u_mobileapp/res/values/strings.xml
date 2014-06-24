@@ -1,4 +1,5 @@
-<resources>
+<?xml version="1.0" encoding="utf-8"?>
+<!--  <resources>
 
     <string name="app_name">B2U</string>
     <string name="add_textbox_hint">Add a ToDo item</string>
@@ -16,11 +17,11 @@
     <string name="challenge_sponsor">Challenge Sponsor</string>
     <string name="challenge_difficulty">Challenge Difficulty</string>
     <string name="challenge_timeNum">Challenge TimeNum</string>
-    <string name="challenge_points">Challenge Points</string>
+    <string name="challenge_points">Challenge Points</string>-->
     
     
 
-<?xml version="1.0" encoding="utf-8"?>
+
 <resources>
 
     <string name="app_name">B2U</string>
