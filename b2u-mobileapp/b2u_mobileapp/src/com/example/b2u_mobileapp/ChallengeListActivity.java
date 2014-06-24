@@ -7,7 +7,11 @@ import java.util.List;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
+import android.widget.Toast;
 
 import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
 import com.microsoft.windowsazure.mobileservices.MobileServiceTable;
@@ -54,21 +58,18 @@ public class ChallengeListActivity extends Activity
 			GridView gridViewToDo = (GridView) findViewById(R.id.listChallenge);
 			gridViewToDo.setAdapter(mAdapter);
 			
-			//Set clickListener here or in the adapter?
-			/*
+			listChallenges("Environmental");
+			
 			gridViewToDo.setOnItemClickListener(new OnItemClickListener() {
+
 				@Override
-				public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
-						long arg3) {
-					Intent challenge_info = new Intent("com.example.b2u_mobileapp.ChallengeInfoActivity");
-					Challenge challenge = (Challenge) arg0.getItemAtPosition(arg2);
-					challenge_info.putExtra("title", challenge.getmTitle());
-					challenge_info.putExtra("description", challenge.getmInstruction());
-					challenge_info.putExtra("challenge", challenge.getm);
-					startActivity(challenge_info);
+				public void onItemClick(AdapterView<?> parent, View view,
+						int position, long id) {
+					// TODO Generate text based on click
+					Toast.makeText(getApplicationContext(),mAdapter.getItem(position).getmTitle(), Toast.LENGTH_SHORT).show();
 				}
 			});
-			*/
+
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}
