@@ -58,7 +58,8 @@ public class ChallengeListActivity extends Activity
 			GridView gridViewToDo = (GridView) findViewById(R.id.listChallenge);
 			gridViewToDo.setAdapter(mAdapter);
 			
-			listChallenges("Environmental");
+
+			//listChallenges("Environmental");
 			
 			gridViewToDo.setOnItemClickListener(new OnItemClickListener() {
 
@@ -69,6 +70,23 @@ public class ChallengeListActivity extends Activity
 					Toast.makeText(getApplicationContext(),mAdapter.getItem(position).getmTitle(), Toast.LENGTH_SHORT).show();
 				}
 			});
+
+
+			//Set clickListener here or in the adapter?
+			/*
+			gridViewToDo.setOnItemClickListener(new OnItemClickListener() {
+				@Override
+				public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+						long arg3) {
+					Intent challenge_info = new Intent("com.example.b2u_mobileapp.ChallengeInfoActivity");
+					Challenge challenge = (Challenge) arg0.getItemAtPosition(arg2);
+					challenge_info.putExtra("title", challenge.getmTitle());
+					challenge_info.putExtra("description", challenge.getmInstruction());
+					challenge_info.putExtra("challenge", challenge.getm);
+					startActivity(challenge_info);
+				}
+			});
+			*/
 
 		} catch (MalformedURLException e) {
 			e.printStackTrace();

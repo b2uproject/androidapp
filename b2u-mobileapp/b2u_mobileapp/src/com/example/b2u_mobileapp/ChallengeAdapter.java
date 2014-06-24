@@ -54,6 +54,7 @@ public class ChallengeAdapter extends ArrayAdapter<Challenge> {
 		final TextView points = (TextView) row.findViewById(R.id.challengePoints);*/
 		
 		title.setText(currentItem.getmTitle());
+
 		/*cause.setText(currentItem.getmCause());
 		category.setText(currentItem.getmCategory());
 		difficulty.setText(currentItem.getmDifficulty());
@@ -63,20 +64,14 @@ public class ChallengeAdapter extends ArrayAdapter<Challenge> {
 
 			@Override
 			public void onClick(View arg0) {
-				if (checkBox.isChecked()) {
-					checkBox.setEnabled(false);
-					if (mContext instanceof ToDoActivity) {
-						ToDoActivity activity = (ToDoActivity) mContext;
-						activity.checkItem(currentItem);
-					}
+				if (mContext instanceof ChallengeListActivity) {
+					ChallengeListActivity activity = (ChallengeListActivity) mContext;
+					activity.displayInfo(currentItem);
 				}
 			}
 		});
-*/
+		
 		return row;
 	}
-	
-
-	
 	
 }

@@ -1,3 +1,25 @@
+<resources>
+
+    <string name="app_name">B2U</string>
+    <string name="add_textbox_hint">Add a ToDo item</string>
+    <string name="add_button_text">Add</string>
+    <string name="challenge_list">List of Challenges </string>
+    <string name="menu_refresh">Refresh</string>
+    <string name="challenge_title">Challenge Title</string>
+    <string name="challenge_id">Challenge Id</string>
+    <string name="challenge_timeUnit">Challenge TimeUnit</string>
+    <string name="challenge_cause">Challenge Cause</string>
+    <string name="challenge_instruction">Challenge Instruction</string>
+    <string name="challenge_submission">Challenge Submission</string><string name="challenge_category">Challenge Category</string>
+    <string name="challenge_url">Challenge URL</string>
+    <string name="challenge_material">Challenge Material</string>
+    <string name="challenge_sponsor">Challenge Sponsor</string>
+    <string name="challenge_difficulty">Challenge Difficulty</string>
+    <string name="challenge_timeNum">Challenge TimeNum</string>
+    <string name="challenge_points">Challenge Points</string>
+    
+    
+
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
@@ -19,5 +41,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="desc">what</string>
+
 
 </resources>
